@@ -1,12 +1,15 @@
 import { RouterProvider } from 'react-router-dom'
 import routes from './routes/routes'
+import PageProvider from './context/PageProvider'
 
 
 function App() {
 
   return (
     <div>
-      <RouterProvider router={routes} />
+      <PageProvider>
+        <RouterProvider router={routes} />
+      </PageProvider>
     </div>
   )
 }
